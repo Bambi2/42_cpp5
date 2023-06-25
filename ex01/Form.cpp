@@ -1,17 +1,17 @@
 #include "Form.hpp"
 
-Form::Form() : name("No Name"), isSigned(false), gradeToSign(MIN_GRADE), gradeToExecute(MIN_GRADE) {
+Form::Form() : name("No Name"), gradeToSign(MIN_GRADE), gradeToExecute(MIN_GRADE), isSigned(false) {
 	std::cout << "Form Default constructor called" << std::endl;
 }
 
-Form::Form(Form const & copy) : name(copy.name), isSigned(copy.isSigned),
-	gradeToSign(copy.gradeToSign), gradeToExecute(copy.gradeToExecute)
+Form::Form(Form const & copy) : name(copy.name),
+	gradeToSign(copy.gradeToSign), gradeToExecute(copy.gradeToExecute), isSigned(copy.isSigned)
 {
 	std::cout << "Form Copy constructor called" << std::endl;
 }
 
 Form::Form(std::string const & name, bool isSigned, int gradeToSign, int gradeToExecute) :
-	name(name), isSigned(isSigned), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute)
+	name(name), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute), isSigned(isSigned)
 {
 	if (gradeToSign < MAX_GRADE || gradeToExecute < MAX_GRADE) {
 		throw (Form::GradeTooHighException());
@@ -48,7 +48,7 @@ int Form::getGradeToExecute() const {
 	return this->gradeToExecute;
 }
 
-void Form::beSigned(Bureaucrat const & bureaucrat) {
+void Form::beSigned(const Bureaucrat& bureaucrat) {
 	if (bureaucrat.getGrade() <= this->gradeToSign) {
 		this->isSigned = true;
 	} else {

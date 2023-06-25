@@ -1,6 +1,13 @@
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : AForm("No Name", "PresidentialPardonForm", false, 25, 5) {
+PresidentialPardonForm::PresidentialPardonForm() :
+	AForm(
+		"No Name",
+		"PresidentialPardonForm",
+		false,
+		PRESEDENTIAL_PARDON_FORM_REQUIRED_GRADE_TO_SIGN,
+		PRESEDENTIAL_PARDON_FORM_REQUIRED_GRADE_TO_EXEC
+	) {
 	std::cout << "PresidentialPardonForm Default constructor called" << std::endl;
 }
 
@@ -8,7 +15,14 @@ PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & co
 	std::cout << "PresidentialPardonForm Copy constructor called" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string const & target) : AForm(target, "PresidentialPardonForm", false, 25, 5) {
+PresidentialPardonForm::PresidentialPardonForm(std::string const & target) :
+	AForm(
+		target,
+		"PresidentialPardonForm",
+		false,
+		PRESEDENTIAL_PARDON_FORM_REQUIRED_GRADE_TO_SIGN,
+		PRESEDENTIAL_PARDON_FORM_REQUIRED_GRADE_TO_EXEC
+	) {
 	std::cout << "PresidentialPardonForm target constructor called" << std::endl;
 }
 

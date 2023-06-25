@@ -16,7 +16,7 @@ Bureaucrat::Bureaucrat(std::string const & name, int grade) : name(name) {
 	} else {
 		this->grade = grade;
 	}
-	std::cout << "Name and grade constructor called" << std::endl;
+	std::cout << "Bureaucrat Name and grade constructor called" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat() {

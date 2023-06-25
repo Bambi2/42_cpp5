@@ -4,6 +4,9 @@
 #include "AForm.hpp"
 #include <string>
 
+const int PRESEDENTIAL_PARDON_FORM_REQUIRED_GRADE_TO_SIGN = 25;
+const int PRESEDENTIAL_PARDON_FORM_REQUIRED_GRADE_TO_EXEC = 5;
+
 class PresidentialPardonForm : public AForm {
 public:
 	PresidentialPardonForm();

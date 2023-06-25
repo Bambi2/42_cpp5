@@ -5,6 +5,9 @@
 #include <string>
 #include <fstream>
 
+const int SHRUBBERY_CREATION_FORM_REQUIRED_GRADE_TO_SIGN = 145;
+const int SHRUBBERY_CREATION_FORM_REQUIRED_GRADE_TO_EXEC = 137;
+
 class ShrubberyCreationForm : public AForm {
 public:
 	ShrubberyCreationForm();

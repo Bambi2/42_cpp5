@@ -6,6 +6,9 @@
 #include <ctime>
 #include <cstdlib>
 
+const int ROBOTOMY_REQUEST_FORM_REQUIRED_GRADE_TO_SIGN = 72;
+const int ROBOTOMY_REQUEST_FORM_REQUIRED_GRADE_TO_EXEC = 45;
+
 class RobotomyRequestForm : public AForm {
 public:
 	RobotomyRequestForm();

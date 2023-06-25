@@ -1,6 +1,13 @@
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm() : AForm("No Name", "ShrubberyCreationForm", false, 145, 137) {
+ShrubberyCreationForm::ShrubberyCreationForm() :
+	AForm(
+		"No Name",
+		"ShrubberyCreationForm",
+		false,
+		SHRUBBERY_CREATION_FORM_REQUIRED_GRADE_TO_SIGN,
+		SHRUBBERY_CREATION_FORM_REQUIRED_GRADE_TO_EXEC
+	) {
 	std::cout << "ShrubberyCreationForm Default constructor called" << std::endl;
 }
 
@@ -8,7 +15,14 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & copy)
 	std::cout << "ShrubberyCreationForm Copy constructor called" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string const & target) : AForm(target, "ShrubberyCreationForm", false, 145, 137) {
+ShrubberyCreationForm::ShrubberyCreationForm(std::string const & target) :
+	AForm(
+		target,
+		"ShrubberyCreationForm",
+		false,
+		SHRUBBERY_CREATION_FORM_REQUIRED_GRADE_TO_SIGN,
+		SHRUBBERY_CREATION_FORM_REQUIRED_GRADE_TO_EXEC
+	) {
 	std::cout << "ShrubberyCreationForm target constructor called" << std::endl;
 }
 

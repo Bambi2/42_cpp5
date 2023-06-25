@@ -1,6 +1,13 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : AForm("No Name", "RobotomyRequestForm", false, 72, 45) {
+RobotomyRequestForm::RobotomyRequestForm() :
+	AForm(
+		"No Name",
+		"RobotomyRequestForm",
+		false,
+		ROBOTOMY_REQUEST_FORM_REQUIRED_GRADE_TO_SIGN,
+		ROBOTOMY_REQUEST_FORM_REQUIRED_GRADE_TO_EXEC
+	) {
 	std::cout << "RobotomyRequestForm Default constructor called" << std::endl;
 }
 
@@ -8,7 +15,14 @@ RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & copy) : AFo
 	std::cout << "RobotomyRequestForm Copy constructor called" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string const & target) : AForm(target, "RobotomyRequestForm", false, 72, 45) {
+RobotomyRequestForm::RobotomyRequestForm(std::string const & target) :
+	AForm(
+		target,
+		"RobotomyRequestForm",
+		false,
+		ROBOTOMY_REQUEST_FORM_REQUIRED_GRADE_TO_SIGN,
+		ROBOTOMY_REQUEST_FORM_REQUIRED_GRADE_TO_EXEC
+	) {
 	std::cout << "RobotomyRequestForm target constructor called" << std::endl;
 }
 
